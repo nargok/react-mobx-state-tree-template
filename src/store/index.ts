@@ -27,6 +27,7 @@ const CountryStore = types
 
     return {
       cancelTimeInterval() {
+        self.autoRefreshActive = false
         clearInterval(timeIntervalId)
       },
       setupTimeInterval() {
